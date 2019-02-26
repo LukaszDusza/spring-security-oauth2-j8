@@ -22,8 +22,8 @@ public class UserInfoService {
         return userDetailsRepository.findByUserName(userName);
     }
 
-    //todo - stworzyc metode serwisową findAll()
-//    public List<UserInfo> getAllActiveUserInfo() {
-//        return userDetailsRepository.findAll();
-//    }
+    //todo - stworzyc metode serwisową findAll() - DONE
+    public List<UserInfo> getAllActiveUserInfo() {
+        return userDetailsRepository.findAll();
+    }
 }

@@ -14,10 +14,9 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true)
-//@EnableGlobalMethodSecurity(securedEnabled = true) //todo - przelaczyc na securedEnabled
+//@EnableGlobalMethodSecurity(prePostEnabled = true)
+@EnableGlobalMethodSecurity(securedEnabled = true) //todo - przelaczyc na securedEnabled - DONE
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-
 
     private UserDetailsServiceImpl userDetailsService;
 

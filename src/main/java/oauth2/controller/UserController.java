@@ -20,18 +20,17 @@ public class UserController {
 	}
 
 
-	//todo - odkomentowac metode getUser
+	//todo - odkomentowac metode getUser - DONE
 
-//	@GetMapping("/user")
-//	public Object getAllUser(@RequestHeader HttpHeaders requestHeader) {
-//
-//		List<UserInfo> userInfos = userService.getAllActiveUserInfo();
-//		if (userInfos == null || userInfos.isEmpty()) {
-//			return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
-//		}
-//		return userInfos;
-//	}
+	@GetMapping("/user")
+	public Object getAllUser(@RequestHeader HttpHeaders requestHeader) {
 
+		List<UserInfo> userInfos = userService.getAllActiveUserInfo();
+		if (userInfos == null || userInfos.isEmpty()) {
+			return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+		}
+		return userInfos;
+	}
 
 
 }

@@ -51,8 +51,8 @@ public class OAuthConfiguration extends AuthorizationServerConfigurerAdapter {
         clients
                 .inMemory()
                 .withClient("client")
-                .secret("secret")
-                //   .secret(getSecretEncode("secret")) //todo - ustawic dekodowanie klucza secret
+               // .secret("secret")
+                .secret(getSecretEncode("secret")) //todo - ustawic dekodowanie klucza secret DONE
                 .authorizedGrantTypes("password", "authorization_code", "refresh_token")
                 .scopes("read", "write")
                 .autoApprove(true);
@@ -79,11 +79,11 @@ public class OAuthConfiguration extends AuthorizationServerConfigurerAdapter {
         return converter;
     }
 
-//    @Bean
-//    public String getSecretEncode(String secret) {
-//        return new BCryptPasswordEncoder().encode(secret);
-//
-//    }
+    @Bean
+    public String getSecretEncode(String secret) {
+        return new BCryptPasswordEncoder().encode(secret);
+
+    }
 
 
 }
