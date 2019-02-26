@@ -6,6 +6,7 @@ import oauth2.repository.UserDetailsRepository;
 import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Repository
 @Transactional
@@ -19,7 +20,10 @@ public class UserInfoService {
 
     public UserInfo getUserInfoByUserName(String userName) {
         return userDetailsRepository.findByUserName(userName);
-
-
     }
+
+    //todo - stworzyc metode serwisową findAll()
+//    public List<UserInfo> getAllActiveUserInfo() {
+//        return userDetailsRepository.findAll();
+//    }
 }

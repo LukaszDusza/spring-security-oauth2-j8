@@ -13,4 +13,9 @@ public class SpringSecurityOauth2ExmpleApplicationTests {
     public void contextLoads() {
     }
 
+    //todo - napisac testy na token
+
+
+    //todo - napisac testy na getUsers
+
 }
